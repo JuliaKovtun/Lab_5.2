@@ -3,13 +3,13 @@
 #include <cmath>
 using namespace std;
 
-double S(double x, double eps, int& n, double s);
-double A(double x, int n, double a);
+double S(double x, double eps, double n, double s);
+double A(double x, double n, double a);
 
 int main()
 {
-	double xp, xk, x, dx, eps, a = 0, R = 0, s = 0;
-	int n = 0;
+	double xp, xk, x, dx, eps, a = 0, R = 0, s = 0, n = 0;
+	//int n = 0;
 
 	cout << "xp = "; cin >> xp;
 	cout << "xk = "; cin >> xk;
@@ -46,7 +46,7 @@ int main()
 }
 
 
-double S(double x, double eps, int& n, double s)
+double S(double x, double eps, double n, double s)
 {
 	n = 0;
 	double a = 1;
@@ -60,7 +60,7 @@ double S(double x, double eps, int& n, double s)
 	return s;
 }
 
-double A(double x, int n, double a)
+double A(double x, double n, double a)
 {
 	double R = x / (1. * n);
 	a *= R;
